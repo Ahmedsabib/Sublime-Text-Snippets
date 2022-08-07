@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[
+#include <bits/stdc++.h>
+using namespace std;
+void test_case() {
+  // TODO: make sure all variable get reset.
+}
+int main(int argc, char const *argv[]) {
+  int t;
+  scanf("%d", &t);
+  while (t--) {
+    test_case();
+  }
+  return 0;
+}
+]]></content>
+  <tabTrigger>template</tabTrigger>
+  <description>scanf</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope >source.python</scope > -->
+</snippet>

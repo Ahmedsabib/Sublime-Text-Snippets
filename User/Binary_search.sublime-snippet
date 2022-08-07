@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[
+// Time Complexity O(log n)
+// Method 2
+int binary_search(vector<int> array, value) {
+	int ind = 0;
+	for (int range = n/2; range >= 1; range /= 2) {
+		while (ind + range < n && array[ind + range] <= value) {
+			ind += range;
+		}
+	}
+	if (array[ind] == value) {
+		return k;
+	}
+}
+]]></content>
+  <tabTrigger>binary_search</tabTrigger>
+  <description>Hard</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope >source.python</scope > -->
+</snippet>

@@ -1,0 +1,4 @@
+{
+    "cmd": ["g++ -std=c++17 -Wshadow -Wall -o -O2 -Wno-unused-result ${file} -o ${file_path}/${file_base_name} && echo '~ Build Finished, Now hit the terminal and Run the test cases!!!'  && ${file_path}/${file_base_name}"],
+    "shell" : true
+}

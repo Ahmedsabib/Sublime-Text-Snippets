@@ -1,0 +1,22 @@
+<snippet>
+    <content><![CDATA[
+// recursive method
+long long extended_gcd(long long a, long long b, long long& x, long long& y) {
+	if (b == 0) {
+		x = 1;
+		y = 0;
+		return a;
+	}
+	long long x1, y1;
+	long long d = extended_gcd(b, a%b, x1, y1);
+	x = y1;
+	y = x1 - y1 * (a/b);
+	return d;
+}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>extended gcd</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.c++</scope>
+    <decription>Insert a cout with newline</decription>
+</snippet>

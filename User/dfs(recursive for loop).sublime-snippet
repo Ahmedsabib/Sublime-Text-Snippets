@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[
+// Method 2 (for loop)
+// Time Complexity O(n+m)
+// Space Complexity O(n)
+// n is the number of vertex and
+// m is the number of edges
+vector<long long> adj[maxn];
+bool visited[maxn];
+void dfs(long long node) {
+  visited[node] = true;
+  // using for loop
+  for (int edges = 0; edges < (int)adj[node].size(); ++edges) {
+    if (visited[adj[node][edges]] == false) {
+      dfs(adj[node][edges]);
+    }
+  }
+}
+]]></content>
+  <tabTrigger>dfs</tabTrigger>
+  <description>for loop</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope >source.python</scope > -->
+</snippet>

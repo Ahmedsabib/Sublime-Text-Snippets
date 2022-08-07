@@ -1,0 +1,14 @@
+<snippet>
+    <content><![CDATA[
+// Time Complexity O(log min(a, b))
+// recursive method
+long long gcd(long long a, long long b) {
+  return b ? gcd(b, a%b) : a;
+}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>gcd</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.c++</scope>
+    <decription>Insert a cout with newline</decription>
+</snippet>

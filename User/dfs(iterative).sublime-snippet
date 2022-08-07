@@ -1,0 +1,42 @@
+<snippet>
+  <content><![CDATA[
+// Iterative Method
+// Time Complexity O(n+m)
+// Space Complexity O(n)
+// n is the number of vertex and
+// m is the number of edges
+vector<long long> adj[maxn];
+bool visited[maxn];
+void dfs(long long node) {
+	// create a stack used to do iterative DFS
+	stack<long long> st;
+	// push the source node into the stack
+	st.push(node);
+	// loop till stack is empty
+	while (!st.empty()) {
+		// Pop a vertex from stack and print it
+		node = st.top();
+		st.pop();
+		// Stack may contain same vertex twice. So
+    // we need to print the popped item only
+    // if it is not visited.
+		if (!visited[node]) {
+			cout << node << ' ';
+			visited[node] = true;
+		}
+		// Get all adjacent vertices of the popped vertex s
+    // If a adjacent has not been visited, then push it
+    // to the stack.
+		for (auto& edges: adj[node]) {
+			if (!visited[edges]) {
+				st.push(edges);
+			}
+		}
+	}
+}
+]]></content>
+  <tabTrigger>dfs</tabTrigger>
+  <description>iterative</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope >source.python</scope > -->
+</snippet>

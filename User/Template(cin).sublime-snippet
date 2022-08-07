@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[
+#include <bits/stdc++.h>
+using namespace std;
+void test_case() {
+	// TODO: make sure all variable get reset.
+}
+int main(int argc, char const *argv[]) {
+	ios_base::sync_with_stdio(false), cin.tie(nullptr);
+	int tc;
+	cin >> tc;
+	while (tc--) {
+		test_case();
+	}
+	return 0;
+}
+
+]]></content>
+  <tabTrigger>template</tabTrigger>
+  <description>cin</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope >source.python</scope > -->
+</snippet>

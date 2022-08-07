@@ -1,0 +1,25 @@
+<snippet>
+    <content><![CDATA[
+// Binary GCD
+long long binary_gcd(long long a, long long b) {
+	if (!a || !b) {
+		return a | b;
+	}
+	unsigned shift = __builtin_ctz(a | b);
+	a >>= __builtin_ctz(a);
+	do {
+		b >>= __builtin_ctz(b);
+		if (a > b) {
+			swap(a, b);
+		}
+		b -= a;
+	} while (b);
+	return a << shift;
+}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>binary_gcd</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.c++</scope>
+    <decription>Insert a cout with newline</decription>
+</snippet>

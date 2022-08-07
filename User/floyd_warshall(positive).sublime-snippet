@@ -1,0 +1,41 @@
+<snippet>
+    <content><![CDATA[
+// For positive weight
+// Time Complexity O(n^3)
+// Space Complexity O(n^2)
+const int inf = (int)1e9 + 7;
+long long adj[n][n];
+long long a[n][n];
+void floyd_warshall() {
+  // First, the algorithm initializes distance using 
+  // the adjacency matrix adj of the graph
+  for (int i = 0; i < n; ++i) {
+    for (int j = 0; j < n; ++j) {
+      if (i == j) {
+        adj[i][j] = 0;
+      }
+      else if (a[i][j]) {
+        adj[i][j] = a[i][j];
+      }
+      else {
+        adj[i][j] = inf;
+      }
+    }
+  }
+  // Then the shortest distances can be found as follows
+  // Remeber the Sequence of looping -> k - i - j
+  for (int k = 0; k < n; ++k) {
+    for (int i = 0; i < n; ++i) {
+      for (int j = 0; j < n; ++j) {
+        adj[i][j] = min(adj[i][j], adj[i][k] + adj[k][j])
+      }
+    }
+  }
+}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>floyd warshall</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.c++</scope>
+    <decription>positive</decription>
+</snippet>

@@ -1,0 +1,15 @@
+{
+	"bootstrapped": true,
+	"channels":
+	[
+	],
+	"in_process_packages":
+	[
+		"LSP",
+	],
+	"installed_packages":
+	[
+		"LSP",
+		"Package Control"
+	],
+}

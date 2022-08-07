@@ -1,0 +1,26 @@
+<snippet>
+    <content><![CDATA[
+// Time Complextity O(sqrt(n))
+vector<long long> divisors(long long n) {
+  vector<long long> p;
+  for (int i = 1; i <= sqrt(n); ++i) {
+    if (n%i == 0) {
+      if (n/i == i) {
+        p.push_back(i);
+        continue;
+      }
+      else {
+        p.push_back(n/i);
+        p.push_back(i);
+      }
+    }
+  }
+  return p;
+}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>divisors</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.c++</scope>
+    <decription>Insert a cout with newline</decription>
+</snippet>

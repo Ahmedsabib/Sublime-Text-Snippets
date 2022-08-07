@@ -1,0 +1,30 @@
+<snippet>
+    <content><![CDATA[
+// Time Complexity O(n log log n)
+vector<bool> is_prime(limit+1, true); // define every number as prime
+vector<long long> primes; // for storing the primes
+void sieve_of_eratosthenes() {
+	long long limit = n; // set the limit according to the problem constrains
+	// Finding out the primes in simple way
+	is_prime[0] = is_prime[1] = false;
+	for (int i = 2; i * i <= limit; ++i) {
+		if (is_prime[i]) {
+			for (int j = i * i; j <= n; j += i) {
+				is_prime[j] = false;
+			}
+		}
+	}
+	// assigning values to an vector
+	for (int i = 2; i <= limit; ++i) {
+		if (is_prime[i]) {
+			primes.push_back(i);
+		}
+	}
+}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>sieve</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.c++</scope>
+    <decription>Insert a cout with newline</decription>
+</snippet>

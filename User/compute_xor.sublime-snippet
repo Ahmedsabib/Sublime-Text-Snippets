@@ -1,0 +1,24 @@
+<snippet>
+    <content><![CDATA[
+// XOR of all elements from 1 to n
+int compute_xor(int n) {
+  if (n%4 == 0) {
+    return n;
+  }
+  else if (n%4 == 1) {
+    return 1;
+  }
+  else if (n%4 == 2) {
+    return n+1;
+  }
+  else {
+    return 0;
+  }
+}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>counting xor</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.c++</scope>
+    <decription>Insert a cout with newline</decription>
+</snippet>

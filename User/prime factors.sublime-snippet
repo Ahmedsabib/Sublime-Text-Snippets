@@ -1,0 +1,24 @@
+<snippet>
+    <content><![CDATA[
+// Time Complextity O(sqrt(n))
+// Method 1
+vector<long long> prime_factorization(long long n) {
+  vector<long long> factorization;
+  for (long long d = 2; d * d <= n; ++d) {
+    while (n%d == 0) {
+      factorization.push_back(d);
+      n /= d;
+    }
+  }
+  if (n > 1) {
+    factorization.push_back(n);
+  }
+  return factorization;
+}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>prime factors</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.c++</scope>
+    <decription>Insert a cout with newline</decription>
+</snippet>
